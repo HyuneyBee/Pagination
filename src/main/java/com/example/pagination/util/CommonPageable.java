@@ -1,6 +1,7 @@
 package com.example.pagination.util;
 
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 public class CommonPageable {
 
@@ -17,7 +18,7 @@ public class CommonPageable {
         this.pageSize = pageSize > MAX_SIZE ? DEFAULT_SIZE : pageSize;
     }
 
-    public PageRequest of() {
+    public Pageable of() {
         return PageRequest.of(page - 1, pageSize);
     }
 }
